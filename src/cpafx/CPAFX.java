@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javax.swing.JFrame;
 
 /**
  *
@@ -24,11 +25,20 @@ public class CPAFX extends Application {
         Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+               JFrame frame =  new Calendar();
+               frame.setVisible(true);
+            }
+           
             
+            /*
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
             }
+            */
         });
         
         StackPane root = new StackPane();
